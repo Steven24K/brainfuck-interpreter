@@ -6,12 +6,19 @@ Than simply run: (This runs the default hello world program from examples/hello.
 
 `python brainfuck.py`
 
-To run your own BF programs run: 
+You can arguments to the Python code to run your own brainfuck (.bf*) files or see a detailed debug log of the memory stack in the console or in a file.
 
-`python brainfuck.py --program <PATH TO FILE>`
+*The program supports any file type with any extension, you can write your brainfuck code in any file(txt, md, cpp, cs, css, html, php etc.)
 
-To see the memory state on the console run: 
 
-`python brainfuck.py --program <PATH TO FILE> --debug True --timeout <SECCONDS>`
+## Arguments
+`--program <PATH TO FILE>`
 
-The timeout is optional, just to slow things down so you can easily read step by step
+`--debug True`
+
+`--timeout <SECCONDS>`
+
+`--log True`
+
+Run: `--help` or `-h` for more detailed information abot the arguments.
+
