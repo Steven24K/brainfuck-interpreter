@@ -5,7 +5,7 @@ def createLogDir():
     if not os.path.exists(dir_name):
         os.makedirs(dir_name)
     f = open(dir_name + "/log.txt", "w+")
-    f.write("")
+    f.write("__________________________BRAINFUCK Interpreter summary__________________________")
 
 def openCodefile(file):
     code = open(file)
@@ -37,15 +37,16 @@ class Interpreter:
         return loops
     def __str__(self):
         summary = """
-        __________________________BRAINFUCK Interpreter summary__________________________
+        ____________________________
+        
         Type: {}
+        Program Counter: {}
         Stack: {}
         Pointer: {}
-        Program Counter: {}
         Last output: {}
         Loops: {}
         """
-        return summary.format(str(type(self)), str(self.stack), str(self.pointer), str(self.pc), self.last_output ,str(self.loops))
+        return summary.format(str(type(self)), str(self.pc), str(self.stack), str(self.pointer), self.last_output ,str(self.loops))
     def evaluate(self, debug = False, timeout = None, log = False):
         while self.pc < len(self.program):
             statement =  self.program[self.pc]
